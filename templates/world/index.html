@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- { % load static % } -->
+<html>
+    <head>
+        <title>Django level two</title>
+    </head>
+    <body>
+        <h1>Hii welcome to Djago level two</h1>
+        <h2>Here are your access record</h2>
+        <div class= 'Djagotwo'>
+            {% if access_record %}
+            <table>
+                <thead>
+                    <th>Site name</th>
+                    <th>Date access</th>
+                </thead>
+                {% for acc in access_record %}
+                <tr>
+                    <td>{{acc.name}}</td>
+                    <td>{{acc.date}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% else %}
+            <p>No access record found</p>
+            {% endif %}
+        </div>
+    </body>
+</html>

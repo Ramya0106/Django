@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        
+        <div class = "container">
+            <h1>Fill out the form</h1>
+            <form method = 'POST'>
+                <!-- for line break -->
+                {{form.as_p}}
+                <!-- for security -->
+                {% csrf_token %}
+                <input type="submit" class = "btn btn-primary" value="submit">
+            </form>
+        </div>
+    </body>
+</html>
