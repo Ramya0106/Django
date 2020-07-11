@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <h1>Welcome to basic page</h1>
+        <nav class="navbar navbar-default navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">brand</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li><a href="{% url 'basic_app:basic' %}">admin</a></li>
+              <li><a href="{% url 'basic_app:index' %}">index</a></li>
+              <li><a href="{% url 'basic_app:other' %}">other</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="container">
+            {% block body_block %}
+<!--            anthing outside this inherited if you extend-->
+            {% endblock %}
+        </div>
+    </body>
+</html>

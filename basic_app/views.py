@@ -20,3 +20,9 @@ def form_name_view(request):
 
 
     return render(request,"basic_app/form_page.html",{'form':form})
+
+def other(request):
+    return  render(request,"basic_app/other.html")
+
+def basic(request):
+    return render(request,"basic_app/basic.html")
