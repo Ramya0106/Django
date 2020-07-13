@@ -13,8 +13,13 @@
               <a class="navbar-brand" href="{% url 'index' %}">Django</a>
             </div>
             <ul class="nav navbar-nav">
-              <li><a href="{% url 'basic_app:basic' %}">admin</a></li>
+              <li><a href="{% url 'basic_app:index' %}">admin</a></li>
               <li><a href="{% url 'learning_user:register' %}">Register</a></li>
+                {% if user.is_authenticated %}
+                <li><a href = "{% url 'logout'%}">Logout</a></li>
+                {% else %}
+                <li><a href="{% url 'learning_user:user_login' %}">login</a></li>
+                {% endif %}
             </ul>
           </div>
         </nav>
