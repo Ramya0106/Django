@@ -1,4 +1,4 @@
-from django.conf.urls import urls
+from django.conf.urls import url
 from learning_user import views
 app_name = 'learning_user'
 

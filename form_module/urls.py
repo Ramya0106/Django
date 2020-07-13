@@ -3,5 +3,5 @@ import form_module.views as fv
 
 urlpatterns = [
     url(r'^$',fv.index,name='index'),
-    url(r'^/user',fv.person_info,name="person_info"),
+    url(r'^user',fv.person_info,name="person_info"),
 ]

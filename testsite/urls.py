@@ -34,6 +34,6 @@ urlpatterns = [
     url("First_app",include('first_app.urls')),
     url("basic_app",include('basic_app.urls')),
     url("form_module",include('form_module.urls')),
-    url(r'^$',views_index,name = index),
-    url(r'^learning_user/',include(learning_user.urls)),
+    url(r'^$',views.index,name = 'index'),
+    url(r'^learning_user/',include('learning_user.urls')),
 ]
