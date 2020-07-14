@@ -34,8 +34,9 @@ urlpatterns = [
     url("First_app",include('first_app.urls')),
     url("basic_app",include('basic_app.urls')),
     url("form_module",include('form_module.urls')),
-    url(r'^$',views.index,name = 'index'),
+    url(r'^index$',views.index,name = 'index'),
     url(r'^learning_user/',include('learning_user.urls')),
     url(r'^logout/$',views.user_logout,name = 'logout'),
     url(r'special/',views.special,name = 'special'),
+    url(r'^adv_cbv_hello',include('adv_cbv_hello.urls'))
 ]

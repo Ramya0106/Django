@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'basic_app',
     'form_module',
     'learning_user',
+    'adv_cbv_hello',
 ]
 
 MIDDLEWARE = [
