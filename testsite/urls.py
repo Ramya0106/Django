@@ -21,6 +21,9 @@ from django.conf.urls import url
 import hello.views as helloV
 import world.views 
 # import first_app.views as fa
+from django.conf.urls import url,include
+from django.contrib import admin
+from learning_user import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,4 +34,8 @@ urlpatterns = [
     url("First_app",include('first_app.urls')),
     url("basic_app",include('basic_app.urls')),
     url("form_module",include('form_module.urls')),
+    url(r'^$',views.index,name = 'index'),
+    url(r'^learning_user/',include('learning_user.urls')),
+    url(r'^logout/$',views.user_logout,name = 'logout'),
+    url(r'special/',views.special,name = 'special'),
 ]

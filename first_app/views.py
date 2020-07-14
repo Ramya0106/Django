@@ -11,3 +11,9 @@ def index(request):
         'data':data
     }
     return render(request,'first_app/index.html',args)
+
+def other(request):
+    return render(request,'first_app/other.html')
+
+def relative(request):
+    return render(request,'first_app/relative_url_template.html')
