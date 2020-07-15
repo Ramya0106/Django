@@ -4,6 +4,8 @@ from adv_cbv_hello import views
 app_name = 'adv_cbv_hello'
 
 urlpatterns = [
-    url(r'^$',views.CBview.as_view(),name = "adv_index"),
-    url(r'^index$', views.IndexView.as_view(), name="adv_index2")
+    # url(r'^$',views.CBview.as_view(),name = "adv_index"),
+    # url(r'^index$', views.IndexView.as_view(), name="adv_index2"),
+    url(r'^list',views.SchoolListView.as_view(),name = "list"),
+    url(r'^(?P<pk>[-\w]+)/$',views.SchoolDetailView.as_view(),name = "detail")
 ]
