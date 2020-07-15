@@ -1,0 +1,9 @@
+{% extends "adv_cbv_hello/adv_base.html" %}
+{% block body_block %}
+    <h1>Delete {{school.name}}?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" class = "btn btn-danger" value="Delete">
+        <a href="{% url 'adv_cbv_hello:detail' pk=school.pk %}">Cancel</a>
+    </form>
+{% endblock %}
