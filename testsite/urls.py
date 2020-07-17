@@ -38,5 +38,6 @@ urlpatterns = [
     url(r'^learning_user/',include('learning_user.urls')),
     url(r'^logout/$',views.user_logout,name = 'logout'),
     url(r'special/',views.special,name = 'special'),
-    url(r'^adv_cbv_hello',include('adv_cbv_hello.urls'))
+    url(r'^adv_cbv_hello',include('adv_cbv_hello.urls')),
+    url(r'clone_project1',include('clone_project1.urls')),
 ]

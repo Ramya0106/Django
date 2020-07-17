@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'form_module',
     'learning_user',
     'adv_cbv_hello',
+    'clone_project1'
 ]
 
 MIDDLEWARE = [
@@ -150,6 +151,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]
+
+LOGIN_REDIRECT_URL = "/"
+
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
